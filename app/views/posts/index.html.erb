@@ -1,0 +1,12 @@
+<div class="contents">
+  <% @posts.each do |post| %>
+    <div class="content">
+      <%= post.text %>
+    </div>
+  <% end %>
+</div>
+
+<%= form_for @post do |f| %>
+  <%= f.text_area :text %>
+  <%= f.submit %>
+<% end %>
